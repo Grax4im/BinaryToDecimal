@@ -15,10 +15,16 @@ function convertBinaryToDecimal() {
         decimal.value = result;
     }
     else {
-        alert("Não é um numero binário");
+        alert(binary.value + " não é um numero Binário \n Digite apenas numeros entre 0 e 1");
     }
 }
 
 function isBinary() {
-    return true;
+    let x = true;
+    [...binary.value].forEach(element => {
+        if(!(element == 0  || element == 1)) {
+            x = false;
+        }
+    })
+    return x;
 }
