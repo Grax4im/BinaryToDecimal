@@ -20,11 +20,5 @@ function convertBinaryToDecimal() {
 }
 
 function isBinary() {
-    let x = true;
-    [...binary.value].forEach(element => {
-        if(!(element == 0  || element == 1)) {
-            x = false;
-        }
-    })
-    return x;
+    return ([...binary.value].filter(a => !(a == 0 || a == 1))).length == 0
 }
